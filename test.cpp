@@ -12,6 +12,27 @@ TEST(EchoTest, EmptyString) {
     EXPECT_EQ("", echo(1,test_val));
 }
 
+<<<<<<< HEAD
+TEST(EchoTest, NumsOnly)
+{
+    char* test_val[3]; test_val[0] = "./c-echo"; test_val[1] = "12345"; test_val[2] = "67890";
+    EXPECT_EQ("12345 67890" , echo(3, test_val));
+}
+
+TEST(EchoTest, UpperAndLowerCase)
+{
+    char* test_val[3]; test_val[0] = "./c-echo"; test_val[1] = "HeLlO"; test_val[2] = "wOrLd";
+
+    EXPECT_EQ("HeLlO wOrLd" , echo(3, test_val));
+}
+
+TEST(EchoTest, OnlySpaces)
+{
+    char* test_val[3]; test_val[0] = "./c-echo"; test_val[1] = "     "; test_val[2] = "     ";
+    EXPECT_EQ("           " , echo(3, test_val));
+}
+
+=======
 TEST(EchoTest, Numbers) {
 	char* test_val[3]; test_val[0] = "./c-echo"; test_val[1] = "1234"; test_val[2] = "5678";
 	EXPECT_EQ("1234 5678", echo(3,test_val));
@@ -28,7 +49,12 @@ TEST(EchoTest, AllCaps) {
 }
 
 
+>>>>>>> 65f28909cc7475cee14b1916be09ccdc2336a893
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 65f28909cc7475cee14b1916be09ccdc2336a893
